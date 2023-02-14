@@ -63,7 +63,12 @@ public class Polygon {
         perimeter/=1000.0;
         return perimeter;
     }
+    public double getPerimeter() {
+        return perimeter;
+    }
+
     public double calculateArea() {
+        getPerimeter();
         area = ((sideLength*sideLength) * numSides)/(4.0*Math.tan((Math.PI / numSides)));
         area = math.round(area*1000.0)/1000.0;
         return area;
